@@ -19,11 +19,24 @@ public class Empresa {
     public List<Empleado> obtenerEmpleadosPorHorasTrabajadasaPartirDe(int horas) {
         List<Empleado> empleadosPorTipo = new ArrayList<>();
         for (Empleado empleado : empleados) {
-            if (empleado.getHorasTrabajadas()>horas) {
+        	if (tieneHorasSuficientes(empleado, horas)) {
                 empleadosPorTipo.add(empleado);
             }
         }
         return empleadosPorTipo;
+    }
+    
+    private boolean tieneHorasSuficientes(Empleado empleado, int horas) {
+        return empleado.getHorasTrabajadas() > horas;
+    }
+
+    public static Empleado buscarEmpleadoPorNombre(String nombre, List<Empleado> empleados) {
+        for (Empleado empleado : empleados) {
+            if (empleado.getNombre().equals(nombre)) {
+                return empleado;
+            }
+        }
+        return null;
     }
 
     // Más metodos
