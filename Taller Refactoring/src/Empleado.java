@@ -67,7 +67,7 @@ public double calcularSalario() {
     }
 
     public void imprimirDetalles() {
-        System.out.println("Nombre: " + getNombre()+"\nGenero: " + getNombre()+
-        "\nSalario: " + getSalarioBase()+"\nHoras trabajadas: " + getHorasTrabajadas()+"\nbonoAnual: " );
+        System.out.println("Nombre: " + getNombre()+"\nGenero: " + getGenero()+
+        "\nSalario: " + getSalarioBase()+"\nHoras trabajadas: " + getHorasTrabajadas());
     }
 }

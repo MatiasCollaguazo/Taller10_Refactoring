@@ -5,6 +5,11 @@ public class EmpleadoFijo extends Empleado {
         super(nombre, salarioBase, horasTrabajadas, 0, genero);
         this.bonoAnual = bonoAnual;
     }
+    
+    public void imprimirDetalles() {
+    	super().imprimirDetalles;
+    	System.out.println("Bono Anual: " + getBonoAnual());
+    }
 
     // Más metodos
 }
