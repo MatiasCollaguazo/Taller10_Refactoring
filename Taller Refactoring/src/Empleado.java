@@ -6,12 +6,11 @@ public class Empleado {
     private double tarifaHora;
 
     public Empleado(){}
-    public Empleado(String nombre, double salarioBase, int horasTrabajadas, double tarifaHora, String departamento) {
+    public Empleado(String nombre, double salarioBase, int horasTrabajadas, double tarifaHora) {
         this.nombre = nombre;
         this.salarioBase = salarioBase;
         this.horasTrabajadas = horasTrabajadas;
         this.tarifaHora = tarifaHora;
-        this.departamento = departamento;
     }
 
     public double calcularSalario() {
@@ -81,5 +80,8 @@ public class Empleado {
         this.departamento = departamento;
     }
 
-    // Más metodos
+    public void imprimirDetalles() {
+        System.out.println("Nombre: " + super.getNombre()+"\nGenero: " + super.getNombre()+
+        "\nSalario: " + super.getSalarioBase()+"\nHoras trabajadas: " + super.getHorasTrabajadas()+"\nbonoAnual: " + bonoAnual);
+    }
 }
