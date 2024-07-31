@@ -81,7 +81,7 @@ public class Empleado {
     }
 
     public void imprimirDetalles() {
-        System.out.println("Nombre: " + super.getNombre()+"\nGenero: " + super.getNombre()+
-        "\nSalario: " + super.getSalarioBase()+"\nHoras trabajadas: " + super.getHorasTrabajadas()+"\nbonoAnual: " + bonoAnual);
+        System.out.println("Nombre: " + getNombre()+"\nGenero: " + getNombre()+
+        "\nSalario: " + getSalarioBase()+"\nHoras trabajadas: " + getHorasTrabajadas()+"\nbonoAnual: " + bonoAnual);
     }
 }
