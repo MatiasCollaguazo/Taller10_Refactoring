@@ -8,6 +8,15 @@ public class Empresa {
         empleados = new ArrayList<>();
     }
 
+    public Empleado buscarEmpleadoPorNombre(String nombre) {
+        for (Empleado empleado : empleados) {
+            if (empleado.getNombre().equals(nombre)) {
+                return empleado;
+            }
+        }
+        return null;
+    }
+
     public void contratarEmpleado(Empleado empleado) {
         empleados.add(empleado);
     }
@@ -30,14 +39,6 @@ public class Empresa {
         return empleado.getHorasTrabajadas() > horas;
     }
 
-    public static Empleado buscarEmpleadoPorNombre(String nombre, List<Empleado> empleados) {
-        for (Empleado empleado : empleados) {
-            if (empleado.getNombre().equals(nombre)) {
-                return empleado;
-            }
-        }
-        return null;
-    }
 
     // Más metodos
 }
