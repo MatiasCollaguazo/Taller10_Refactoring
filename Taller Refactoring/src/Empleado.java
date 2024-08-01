@@ -3,36 +3,38 @@ public class Empleado {
     private double salarioBase;
     private int horasTrabajadas;
     private String genero;
+    private double tarifaHora;
 
     public Empleado(){}
-    public Empleado(String nombre, double salarioBase, int horasTrabajadas, String genero) {
+    public Empleado(String nombre, double salarioBase, int horasTrabajadas, String genero, double tarifaHora) {
         this.nombre = nombre;
         this.salarioBase = salarioBase;
         this.horasTrabajadas = horasTrabajadas;
         this.genero = genero;
-
-    }
-// metodo 1 implementado
-protected double salarioPorDepartamento() {
-    return 0;
-}
-
-// metodo 2 implementado
-public double horasExtra(double salarioBase){
-    double extra = 0;
-    if(horasTrabajadas > 40){
-        extra = (horasTrabajadas - 40) * 50; // Pago de horas extra
+        this.tarifaHora = tarifaHora;
     }
 
-    return extra;
-}
+    // metodo 1 implementado
+    protected double salarioPorDepartamento() {
+        return 0;
+    }
 
-// metodo modificado
-public double calcularSalario() {
-    double salarioTotal = salarioBase + horasExtra(salarioBase) + salarioPorDepartamento();
+    // metodo 2 implementado
+    public double horasExtra(double salarioBase){
+        double extra = 0;
+        if(horasTrabajadas > 40){
+            extra = (horasTrabajadas - 40) * 50; // Pago de horas extra
+        }
 
-    return salarioTotal;
-}
+        return extra;
+    }
+
+    // metodo modificado
+    public double calcularSalario() {
+        double salarioTotal = salarioBase + horasExtra(salarioBase) + salarioPorDepartamento();
+
+        return salarioTotal;
+    }
 
     public String getNombre() {
         return nombre;
@@ -64,6 +66,10 @@ public double calcularSalario() {
 
     public void setTarifaHora(double tarifaHora) {
         this.tarifaHora = tarifaHora;
+    }
+
+    public String getGenero(){
+        return this.genero;
     }
 
     public void imprimirDetalles() {

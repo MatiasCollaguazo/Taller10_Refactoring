@@ -15,8 +15,12 @@ public class EmpleadoTemporario extends Empleado {
         this.genero = genero;
     }
     
+    public int getMesesContratados(){
+        return mesesContrato;
+    }
+
     public void imprimirDetalles() {
-    	super().imprimirDetalles;
+    	super.imprimirDetalles();
     	System.out.println("Meses Contratados: " + getMesesContratados());
     }
 
